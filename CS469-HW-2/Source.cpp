@@ -6,10 +6,16 @@
 #define PI 3.14159265
 
 static GLfloat lpos[] = { 0.0, 0.0, 4.0, 1.0 };
-static GLfloat white[] = { 1.0, 1.0, 1.0, 1.0 };
 static GLfloat black[] = { 0.0, 0.0, 0.0, 1.0 };
+static GLfloat white[] = { 1.0, 1.0, 1.0, 1.0 };
+static GLfloat gray[] = { 0.5, 0.5, 0.5, 1.0 };
 static GLfloat red[] = { 1.0, 0.0, 0.0, 1.0 };
+static GLfloat green[] = { 0.0, 1.0, 0.0, 1.0 };
+static GLfloat blue[] = { 0.0, 0.0, 1.0, 1.0 };
 static GLfloat yellow[] = { 1.0, 1.0, 0.0, 1.0 };
+static GLfloat magenta[] = { 1.0, 0.0, 1.0, 1.0 };
+static GLfloat cyan[] = { 0.0, 1.0, 1.0, 1.0 };
+static GLfloat darkcyan[] = { 0.0, 0.4, 0.4, 1.0 };
 static float alpha = 0.0;
 static float beta = PI / 6.0;
 static float zoom = 10.0;
@@ -35,7 +41,7 @@ float zTwisted;
 void DrawTopTriangleSet(){
 	glMaterialfv(GL_FRONT, GL_EMISSION, black);
 	glMaterialfv(GL_BACK, GL_EMISSION, black);
-	glMaterialfv(GL_FRONT, GL_AMBIENT_AND_DIFFUSE, yellow);
+	glMaterialfv(GL_FRONT, GL_AMBIENT_AND_DIFFUSE, cyan);
 	glMaterialfv(GL_BACK, GL_AMBIENT_AND_DIFFUSE, yellow);
 	glBegin(GL_TRIANGLE_STRIP);
 
@@ -142,7 +148,7 @@ void DrawBottomTriangleSetNormalVector(){
 void DrawBackTriangleSet(){
 	glMaterialfv(GL_FRONT, GL_EMISSION, black);
 	glMaterialfv(GL_BACK, GL_EMISSION, black);
-	glMaterialfv(GL_FRONT, GL_AMBIENT_AND_DIFFUSE, yellow);
+	glMaterialfv(GL_FRONT, GL_AMBIENT_AND_DIFFUSE, green);
 	glMaterialfv(GL_BACK, GL_AMBIENT_AND_DIFFUSE, yellow);
 	glBegin(GL_TRIANGLE_STRIP);
 
